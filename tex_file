@@ -1,0 +1,260 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Tighter margins for compact layout
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]\vspace{-2pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+% Sub-project heading within a work experience
+\newcommand{\resumeSubProject}[1]{
+  \vspace{2pt}
+  \item[]{\small\textbf{#1}}\vspace{-4pt}
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Nidhi Shekhar} \\ \vspace{2pt}
+    \small 7019746833 $|$
+    \href{mailto:your@gmail.com}{\underline{Gmail}} $|$
+    \href{https://linkedin.com/in/}{\underline{LinkedIn}} $|$
+    \href{https://github.com/}{\underline{GitHub}} $|$
+    \href{https://yourportfolio.com}{\underline{Portfolio}} $|$
+    Bengaluru, KA
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {PES University}{Bengaluru, KA}
+      {Bachelor of Technology in Computer Science and Engineering}{Sep. 2022 -- June 2026}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    %--- TwoSpoon.ai ---
+    \resumeSubheading
+      {Full-Stack Intern}{Oct 2025 -- Present}
+      {TwoSpoon.ai}{}
+    \resumeSubProject{End-to-End Jira-like Service Management System}
+      \resumeItemListStart
+        \resumeItem{Engineered a multi-tenant Jira Cloud Integration platform with OAuth2.0, using Atlassian REST APIs for dynamic service desk, issue and user management.}
+        \resumeItem{Designed and implemented microservices using TypeScript, Node.js, Express.js, PostgreSQL, with Redis-backed caching and JWT-secured endpoints.}
+        \resumeItem{Automated project, ticket and workflow synchronization via advanced JQL, webhooks and custom field mappings, supporting real-time updates and audit trails.}
+        \resumeItem{Containerized the system with Docker and orchestrated deployments using PM2.}
+        \resumeItem{Led API schema design and data normalization for complex Jira entities, optimizing for enterprise-grade reliability.}
+      \resumeItemListEnd
+
+    %--- Drivool Technologies ---
+    \resumeSubheading
+      {Software Engineering Intern}{Jan 2023 -- Oct 2025}
+      {Drivool Technologies Pvt. Ltd.}{}
+
+    \resumeSubProject{IoT Communication Platform with MQTT Bridge}
+      \resumeItemListStart
+        \resumeItem{Deployed a Node.js server on AWS EC2 implementing industrial Modbus protocol mapping and MQTT broker communication for remote PLC control.}
+        \resumeItem{Engineered a secure MQTT architecture with load-balancing middleware, reconnection handling and topic management.}
+        \resumeItem{Converted complex industrial mappings from Excel to optimized JSON structures for efficient API consumption.}
+        \resumeItem{Programmed ESP32 microcontrollers in C/C++ with PubSubClient library for MQTT communication with industrial control systems for internal testing before deployment.}
+      \resumeItemListEnd
+
+    \resumeSubProject{PowerTap -- Cloud Connected Smart Electric Meter}
+      \resumeItemListStart
+        \resumeItem{Developed Android phone client (Kotlin BLE) and responsive web dashboard for real-time energy telemetry.}
+        \resumeItem{Focused on firmware-level debugging and functional testing to ensure reliable cloud connectivity.}
+        \resumeItem{\textit{Tools/Protocols:} UART, ST microcontroller, ESP32, Arduino IDE, WebSockets, Bluetooth Low Energy.}
+      \resumeItemListEnd
+
+    \resumeSubProject{Microservices Hosting on AWS EC2}
+      \resumeItemListStart
+        \resumeItem{Developed and utilized multiple APIs for storing, retrieving, and deleting historical vehicle movement traces.}
+        \resumeItem{Wrote cron jobs for deleting old historical data and enhanced data management for GPS-based IoT solutions.}
+        \resumeItem{Implemented critical cybersecurity steps to set up SSH and reverse proxy.}
+        \resumeItem{\textit{Tools/Software:} AWS EC2, socket programming, MongoDB.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{AWS Lambda Clone} $|$ \emph{FastAPI, Streamlit, Prometheus, Grafana, Docker, PostgreSQL}}{}
+          \resumeItemListStart
+            \resumeItem{Built a serverless execution platform mimicking AWS Lambda functionality with isolated Python and JavaScript code execution using Docker containers.}
+            \resumeItem{Developed FastAPI backend with Streamlit UI, Grafana for data visualisation, Prometheus for metrics, and Kubernetes for container orchestration.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Multithreaded Web Server in C (trashttp)} $|$ \emph{C, Pthreads, OpenSSL}}{}
+          \resumeItemListStart
+            \resumeItem{Designed to handle 1000+ client requests simultaneously using a thread pool and work-stealing approach with configurable scheduling (round-robin, least connections).}
+            \resumeItem{Supports basic HTTP functionality with SSL encryption for secure communication.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Collaborative Skill \& Project Management Platform} $|$ \emph{Flask, React, SQL, JavaScript, HTML/CSS}}{}
+          \resumeItemListStart
+            \resumeItem{Designed RESTful APIs for user authentication, skill/project management, and collaborations with Flask backend, React frontend, and MariaDB database.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Water-Meter} $|$ \emph{React Native, Android SDK}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a cross-platform water meter app for apartment associations to track water levels; designed intuitive UI aligned with Material Design principles.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Cloud-Based Attendance System using RFID} $|$ \emph{Arduino IDE, ESP32-WROOM, WebSockets}}{}
+          \resumeItemListStart
+            \resumeItem{Integrated RFID readers, LCD, keypad sensors with ESP32-WROOM; programmed custom socket program utilizing Wi-Fi for real-time attendance data transmission on AWS EC2.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Quantifying Modality Contributions via Disentangling Multimodal Representations}}{Pre-Print, Cornell arXiv}
+      \resumeItemListStart
+        \resumeItem{Proposed a framework based on Partial Information Decomposition (PID) for quantifying modality contributions.}
+        \resumeItem{Developed an algorithm based on the Iterative Proportional Fitting Procedure (IPFP) that computes layer and dataset-level contributions without retraining, enabling scalable, inference-only analysis.}
+        \resumeItem{Validated on synthetic data, diverse benchmarks, and models such as BLIP, LLaVA, PaliGemma and SmolVLM.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Comparative Analysis of ML Algorithms for Binary Classification of Tea Leaf Diseases}}{IEEE ICAECT, Jan 2025}
+      \resumeItemListStart
+        \resumeItem{Conducted research on plant disease detection using 4 advanced ML algorithms; published on IEEE Xplore.}
+        \resumeItem{Used Python, TensorFlow, Keras, Scikit-learn, Matplotlib; classification via Autoencoders, LightGBM, SOMs, VGG16.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXTRA CURRICULARS & AWARDS-----------
+\section{Extra Curriculars \& Awards}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      $\bullet$ Semi-Finalist at Deloitte's Hacksplosion — developed a mail order processing system using RPA, NLP and Kafka. \\
+      $\bullet$ Two-time recipient of the \textit{Distinction Award Certificate} for scoring 8.5+ GPA. \\
+      $\bullet$ Won \textit{Best Business Model Canvas and Prototype} as Team Lead at the Centre for Innovation and Entrepreneurship. \\
+      $\bullet$ Performed for PESU's Music Club event ``Evanescence'' as guitarist for the band \textit{Xuberance}.
+    }}
+ \end{itemize}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C, Java, SQL, JavaScript, TypeScript, Kotlin, Dart} \\
+     \textbf{Frameworks}{: React, Flask, FastAPI, Streamlit, Node.js, React Native, Express.js, Next.js} \\
+     \textbf{Platforms \& Tools}{: Android Studio \& SDK, Atlassian Cloud, Jira Cloud, Jira Assets} \\
+     \textbf{Databases}{: PostgreSQL, MariaDB, MongoDB, MySQL, Redis} \\
+     \textbf{DevOps \& Infra}{: Docker, Kubernetes, AWS EC2, nginx, PM2} \\
+     \textbf{Monitoring}{: Prometheus, Grafana} \\
+     \textbf{Version Control}{: Git, GitHub, BitBucket} \\
+     \textbf{Embedded \& Hardware}{: ESP32, Arduino IDE} \\
+     \textbf{Design \& UI}{: HTML, CSS, GIMP, Canva} \quad \textbf{Testing}{: K6}
+    }}
+ \end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+      Getting Started with Jira Work Management $|$ AWS Getting Started with Compute $|$ Problem Solving in C (Intermediate) $|$ CRM (Salesforce)
+    }}
+ \end{itemize}
+
+%-----------RELEVANT COURSEWORK-----------
+\section{Relevant Coursework}
+ \begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+      Computer Networks, Database Management Systems, Web Technologies, Operating Systems, Machine Learning, Software Engineering, Cloud Computing, Data Structures and Algorithms, Statistics and Data Analysis, Heterogeneous Parallelism, Applied Cryptography, Object Oriented Design and Analysis, Enterprise Business Technologies, Digital Forensics, Linux, Bash Scripting, Technical Writing
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
