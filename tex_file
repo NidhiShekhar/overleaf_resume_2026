@@ -1,9 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,10.5pt]{article}
 
 \usepackage{latexsym}
@@ -96,10 +90,10 @@
 \begin{center}
     \textbf{\Huge \scshape Nidhi Shekhar} \\ \vspace{2pt}
     \small 7019746833 $|$
-    \href{mailto:your@gmail.com}{\underline{Gmail}} $|$
-    \href{https://linkedin.com/in/}{\underline{LinkedIn}} $|$
-    \href{https://github.com/}{\underline{GitHub}} $|$
-    \href{https://yourportfolio.com}{\underline{Portfolio}} $|$
+    \href{mailto:nidhi123shekhar@gmail.com}{\underline{Gmail}} $|$
+    \href{https://www.linkedin.com/in/nidhi-shekhar/}{\underline{LinkedIn}} $|$
+    \href{https://github.com/NidhiShekhar}{\underline{GitHub}} $|$
+    \href{https://blog-nidhi-shekhar.vercel.app}{\underline{Portfolio}} $|$
     Bengaluru, KA
 \end{center}
 
@@ -117,8 +111,9 @@
 
     %--- TwoSpoon.ai ---
     \resumeSubheading
-      {Full-Stack Intern}{Oct 2025 -- Present}
-      {TwoSpoon.ai}{}
+      {Full-Stack Intern $|$ TwoSpoon.ai}{Oct 2025 -- May 2026}
+      {}{}
+      \vspace{-12pt}
     \resumeSubProject{End-to-End Jira-like Service Management System}
       \resumeItemListStart
         \resumeItem{Engineered a multi-tenant Jira Cloud Integration platform with OAuth2.0, using Atlassian REST APIs for dynamic service desk, issue and user management.}
@@ -128,11 +123,15 @@
         \resumeItem{Led API schema design and data normalization for complex Jira entities, optimizing for enterprise-grade reliability.}
       \resumeItemListEnd
 
+    \vspace{6pt}
+    \hrule height 0.2pt
+    \vspace{6pt}
+
     %--- Drivool Technologies ---
     \resumeSubheading
-      {Software Engineering Intern}{Jan 2023 -- Oct 2025}
-      {Drivool Technologies Pvt. Ltd.}{}
-
+      {Software Engineering Intern $|$ Drivool Technologies Pvt. Ltd.}{Jan 2023 -- Oct 2025}
+      {}{}
+    \vspace{-12pt}
     \resumeSubProject{IoT Communication Platform with MQTT Bridge}
       \resumeItemListStart
         \resumeItem{Deployed a Node.js server on AWS EC2 implementing industrial Modbus protocol mapping and MQTT broker communication for remote PLC control.}
@@ -158,31 +157,55 @@
 
   \resumeSubHeadingListEnd
 
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+  {\textbf{Quantifying Modality Contributions via Disentangling Multimodal Representations}}{ 39th FLAIRS, May 2026}
+  \vspace{5pt}
+  \resumeItemListStart
+    \resumeItem{Published in the \textbf{{39th International FLAIRS Conference}} in Florida. Won the \textbf{"Best Paper"} award in the main track.}
+    \resumeItem{Proposed a principled modality attribution framework using Partial Information Decomposition, decomposing internal VLM representations into unique, redundant, and synergistic information components to produce interpretable contribution scores.}
+    \resumeItem{Identified persistent textual dominance across 6 VLMs and 3 benchmarks: text contribution ranged from 55--65\% on standard tasks, reaching 81.39\% for SmolVLM-256M on GQA, while CLEVR approached near-parity (48.6\% text / 51.4\% image).}
+    \resumeItem{Demonstrated via perturbation analysis that to noisy image inputs caused Qwen3-VL to shift to \textgreater99\% visual reliance, and dummy text replacement yielded \textgreater98\% visual reliance, validating the metric's diagnostic sensitivity.}
+    \resumeItem{Attributed textual bias to fusion architecture rather than model scale: scaling Qwen3-VL from 2B to 8B parameters produced negligible shifts in modality ratios, while bidirectional and image-to-text cross-attention fusion yielded significantly more balanced contributions (55.3\% image) compared to concatenation-based designs (54.4\% text dominance).}
+  \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Comparative Analysis of ML Algorithms for Binary Classification of Tea Leaf Diseases}}{5th ICAECT, Jan 2025}
+      \vspace{5pt}
+      \resumeItemListStart
+        \resumeItem{Engineered a two-stage disease detection pipeline using transfer learning (VGG16 feature extraction) paired with 4 ML classifiers: Autoencoders, LightGBM, CatBoost, and SOMs, achieving up to 87.88\% test accuracy. Published on IEEE Xplore.}
+        \resumeItem{Processed and augmented a 4,259-image dataset using OpenCV, MD5-based deduplication, and min-max normalization; applied data augmentation to address class imbalance across binary labels.}
+        \resumeItem{Benchmarked models on precision, recall, and F1-score; findings documented with confusion matrices and ROC curves.}
+        \resumeItem{Tech stack: Python, TensorFlow, Keras, Scikit-learn, LightGBM, CatBoost, OpenCV, Matplotlib, Roboflow.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{AWS Lambda Clone} $|$ \emph{FastAPI, Streamlit, Prometheus, Grafana, Docker, PostgreSQL}}{}
+          {\textbf{AWS Lambda Clone} $|$ \emph{FastAPI, Streamlit, Prometheus, Grafana, Docker, PostgreSQL}}{\href{https://github.com/NidhiShekhar/serverless-lambda-clone}{\underline{GitHub}}}
           \resumeItemListStart
             \resumeItem{Built a serverless execution platform mimicking AWS Lambda functionality with isolated Python and JavaScript code execution using Docker containers.}
             \resumeItem{Developed FastAPI backend with Streamlit UI, Grafana for data visualisation, Prometheus for metrics, and Kubernetes for container orchestration.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Multithreaded Web Server in C (trashttp)} $|$ \emph{C, Pthreads, OpenSSL}}{}
+          {\textbf{Multithreaded Web Server in C (trashttp)} $|$ \emph{C, Pthreads, OpenSSL}}{\href{https://github.com/NidhiShekhar/trashttp}{\underline{GitHub}}}
           \resumeItemListStart
             \resumeItem{Designed to handle 1000+ client requests simultaneously using a thread pool and work-stealing approach with configurable scheduling (round-robin, least connections).}
             \resumeItem{Supports basic HTTP functionality with SSL encryption for secure communication.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Collaborative Skill \& Project Management Platform} $|$ \emph{Flask, React, SQL, JavaScript, HTML/CSS}}{}
+          {\textbf{Collaborative Skill \& Project Management Platform} $|$ \emph{Flask, React, SQL, JavaScript, HTML/CSS}}{\href{https://github.com/NidhiShekhar/Skill-exchange-platform}{\underline{GitHub}}}
           \resumeItemListStart
             \resumeItem{Designed RESTful APIs for user authentication, skill/project management, and collaborations with Flask backend, React frontend, and MariaDB database.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Water-Meter} $|$ \emph{React Native, Android SDK}}{}
+          {\textbf{Water-Meter} $|$ \emph{React Native, Android SDK}}{\href{https://github.com/NidhiShekhar/water-meter}{\underline{GitHub}}}
           \resumeItemListStart
             \resumeItem{Developed a cross-platform water meter app for apartment associations to track water levels; designed intuitive UI aligned with Material Design principles.}
           \resumeItemListEnd
@@ -195,29 +218,12 @@
 
     \resumeSubHeadingListEnd
 
-%-----------PUBLICATIONS-----------
-\section{Publications}
-  \resumeSubHeadingListStart
-    \resumeProjectHeading
-      {\textbf{Quantifying Modality Contributions via Disentangling Multimodal Representations}}{Pre-Print, Cornell arXiv}
-      \resumeItemListStart
-        \resumeItem{Proposed a framework based on Partial Information Decomposition (PID) for quantifying modality contributions.}
-        \resumeItem{Developed an algorithm based on the Iterative Proportional Fitting Procedure (IPFP) that computes layer and dataset-level contributions without retraining, enabling scalable, inference-only analysis.}
-        \resumeItem{Validated on synthetic data, diverse benchmarks, and models such as BLIP, LLaVA, PaliGemma and SmolVLM.}
-      \resumeItemListEnd
-    \resumeProjectHeading
-      {\textbf{Comparative Analysis of ML Algorithms for Binary Classification of Tea Leaf Diseases}}{IEEE ICAECT, Jan 2025}
-      \resumeItemListStart
-        \resumeItem{Conducted research on plant disease detection using 4 advanced ML algorithms; published on IEEE Xplore.}
-        \resumeItem{Used Python, TensorFlow, Keras, Scikit-learn, Matplotlib; classification via Autoencoders, LightGBM, SOMs, VGG16.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
 
 %-----------EXTRA CURRICULARS & AWARDS-----------
 \section{Extra Curriculars \& Awards}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-      $\bullet$ Semi-Finalist at Deloitte's Hacksplosion — developed a mail order processing system using RPA, NLP and Kafka. \\
+      $\bullet$ Semi-Finalist at Deloitte's Hacksplosion: developed a mail order processing system using RPA, NLP and Kafka. \\
       $\bullet$ Two-time recipient of the \textit{Distinction Award Certificate} for scoring 8.5+ GPA. \\
       $\bullet$ Won \textit{Best Business Model Canvas and Prototype} as Team Lead at the Centre for Innovation and Entrepreneurship. \\
       $\bullet$ Performed for PESU's Music Club event ``Evanescence'' as guitarist for the band \textit{Xuberance}.
@@ -236,7 +242,8 @@
      \textbf{Monitoring}{: Prometheus, Grafana} \\
      \textbf{Version Control}{: Git, GitHub, BitBucket} \\
      \textbf{Embedded \& Hardware}{: ESP32, Arduino IDE} \\
-     \textbf{Design \& UI}{: HTML, CSS, GIMP, Canva} \quad \textbf{Testing}{: K6}
+     \textbf{Design \& UI}{: HTML, CSS, GIMP, Canva} \\
+     \textbf{Testing}{: K6}\quad 
     }}
  \end{itemize}
 
